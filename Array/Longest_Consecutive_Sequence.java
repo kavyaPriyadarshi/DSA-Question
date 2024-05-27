@@ -12,8 +12,7 @@ Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefor
 class Solution {
     public int longestConsecutive(int[] nums) {
         HashMap<Integer,Boolean> hs = new HashMap<Integer,Boolean>();
-        //int j=i;
-        int count1=0,count2=0,sum=0,len=0,ele=0;
+        int count1=0,count2=0,len=0,ele=0;
         for(int i=0; i<nums.length ; i++)
         {
             hs.put(nums[i],false);
