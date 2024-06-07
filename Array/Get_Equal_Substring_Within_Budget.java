@@ -13,7 +13,6 @@ Explanation: "abc" of s can change to "bcd".
 That costs 3, so the maximum length is 3.
 */
 
-//Uses Sliding Concept
 class Solution {
     public int equalSubstring(String s, String t, int maxCost) {
         int left = 0, ans = -1;
