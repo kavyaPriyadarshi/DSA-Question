@@ -28,3 +28,41 @@ class Solution {
         return true;
     }
 }
+
+
+//OR Second Approach
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        
+        if(p==null && q==null){
+            return true;
+        }
+        if(p==null && q!=null){
+            return false;
+        }
+        if(p!=null && q==null){
+            return false;
+        }
+
+        boolean leftval = isSameTree(p.left,q.left);
+        boolean rightval = isSameTree(p.right,q.right);
+        // boolean nodeval = true;
+
+        // if(p.val==q.val){
+        //     nodeval = true;
+        // }
+        // else{
+        //     nodeval = false;
+        // }
+
+        boolean nodeval = p.val == q.val;
+        if(leftval && rightval && nodeval){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+
+    }
+}
